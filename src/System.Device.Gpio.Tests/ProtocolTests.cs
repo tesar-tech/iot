@@ -18,6 +18,7 @@ public class ProtocolsTests
 {
     [Fact]
     [Trait("feature", "spi")]
+    [ActiveIssue("https://github.com/dotnet/iot/issues/2339")]
     public void SPI_Mcp3008CanRead()
     {
         using (Mcp3008 adc = CreateAdc())
