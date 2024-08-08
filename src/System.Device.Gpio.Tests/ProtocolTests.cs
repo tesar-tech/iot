@@ -16,9 +16,9 @@ namespace System.Device.Gpio.Tests;
 
 public class ProtocolsTests
 {
-    [Fact]
-    [Trait("feature", "spi")]
-    [ActiveIssue("https://github.com/dotnet/iot/issues/2339")]
+    // See #2339: This test is very frequently failing in CI, looks like a hardware issue.
+    // [Fact]
+    // [Trait("feature", "spi")]
     public void SPI_Mcp3008CanRead()
     {
         using (Mcp3008 adc = CreateAdc())
